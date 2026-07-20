@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MICROCOMP — nowy kierunek designu</title>
+  <style>
+    :root{
+      --ink:#07111f;
+      --panel:#0b1726;
+      --panel-2:#101f32;
+      --line:rgba(148,163,184,.22);
+      --text:#eef5ff;
+      --muted:#9fb0c4;
+      --paper:#f4f7f8;
+      --green:#17b978;
+      --green-2:#b7f7d5;
+      --amber:#f0b35a;
+      --blue:#8fb8ff;
+      --radius:28px;
+      --shadow:0 24px 80px rgba(2,8,23,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;background:var(--paper);color:#0e1726}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:linear-gradient(90deg,#000 1px,transparent 1px),linear-gradient(#000 1px,transparent 1px);background-size:42px 42px;z-index:20}
+    a{color:inherit;text-decoration:none}
+    .assumption{display:none}
+    .topbar{position:fixed;z-index:40;top:18px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 32px));height:70px;border-radius:22px;background:rgba(7,17,31,.76);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 20px;box-shadow:0 18px 60px rgba(2,8,23,.2)}
+    .brand{display:flex;align-items:center;gap:12px;color:white;font-weight:800;letter-spacing:.08em}
+    .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#17b978,#0d7f5a);display:grid;place-items:center;font-size:11px;letter-spacing:.04em;box-shadow:0 0 0 6px rgba(23,185,120,.12)}
+    .nav{display:flex;gap:6px;align-items:center;color:rgba(255,255,255,.68);font-size:14px}
+    .nav a{padding:12px 13px;border-radius:13px}.nav a:hover{background:rgba(255,255,255,.08);color:white}
+    .call{display:flex;align-items:center;gap:10px;background:white;color:#07111f;border-radius:16px;padding:13px 17px;font-weight:800;font-size:14px}.call span{color:#17a06b}
+    .hero{min-height:100vh;background:radial-gradient(circle at 70% 10%,rgba(23,185,120,.2),transparent 34%),linear-gradient(135deg,#06101d 0%,#07111f 44%,#0d1b2e 100%);color:var(--text);padding:124px 22px 46px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:auto -15% -30% -15%;height:55%;background:radial-gradient(ellipse at center,rgba(143,184,255,.18),transparent 60%);filter:blur(18px)}
+    .wrap{width:min(1180px,100%);margin:auto;position:relative;z-index:2}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:26px;align-items:stretch}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--green-2);border:1px solid rgba(183,247,213,.22);background:rgba(23,185,120,.08);padding:9px 13px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:999px;background:var(--green);box-shadow:0 0 24px var(--green)}
+    h1{font-family: ui-serif, Georgia, Cambria, serif;font-weight:650;letter-spacing:-.06em;line-height:.92;margin:28px 0 22px;font-size:clamp(48px,8.2vw,108px)}
+    .lead{font-size:clamp(18px,2.2vw,24px);line-height:1.42;color:#c7d4e5;max-width:680px;margin:0 0 30px}.lead strong{color:white}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap}.primary,.secondary{height:54px;display:inline-flex;align-items:center;gap:10px;border-radius:16px;padding:0 20px;font-weight:850}.primary{background:var(--green);color:#03130d;box-shadow:0 20px 60px rgba(23,185,120,.24)}.secondary{border:1px solid rgba(255,255,255,.16);color:white;background:rgba(255,255,255,.04)}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:42px;max-width:670px}.metric{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.045);border-radius:18px;padding:16px}.metric b{font-size:28px;letter-spacing:-.04em}.metric small{display:block;color:#9fb0c4;margin-top:4px;font-weight:700}
+    .console{min-height:620px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;position:relative}.console:before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,transparent 0 35%,rgba(255,255,255,.08) 36%,transparent 47%);pointer-events:none}.screen-head{height:58px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;padding:0 18px;color:#9fb0c4;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.lights{display:flex;gap:8px}.lights i{width:10px;height:10px;border-radius:50%;background:#31435d}.lights i:nth-child(1){background:#17b978}.lights i:nth-child(2){background:#f0b35a}.screen{padding:22px;display:grid;gap:14px}.status{background:#07111f;border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:20px}.status-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.pill{border:1px solid rgba(23,185,120,.3);background:rgba(23,185,120,.1);color:var(--green-2);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:850}.bars{display:grid;gap:10px}.bar{height:14px;background:#16263a;border-radius:999px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--green),#8fb8ff);border-radius:999px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini{background:rgba(7,17,31,.75);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:18px;min-height:142px}.mini label{color:#7f93ad;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.mini strong{display:block;color:white;font-size:24px;margin:12px 0 6px;letter-spacing:-.03em}.mini p{margin:0;color:#aebdd0;font-size:13px;line-height:1.4}.feed{display:grid;gap:10px;margin-top:2px}.event{display:flex;gap:10px;align-items:center;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px 13px;color:#d8e3f0;font-size:14px}.event i{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 20px rgba(23,185,120,.7)}
+    .map{margin-top:2px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(135deg,rgba(143,184,255,.08),rgba(23,185,120,.07));padding:16px}.map-title{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#8fb8ff;font-weight:900;margin-bottom:12px}.map-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.city{border:1px solid rgba(255,255,255,.09);background:rgba(7,17,31,.5);border-radius:12px;padding:9px 7px;text-align:center;color:#cbd5e1;font-size:12px;font-weight:800}
+    .section{padding:94px 22px}.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}.section h2{font-family: ui-serif, Georgia, Cambria, serif;font-size:clamp(38px,5.4vw,72px);line-height:.96;letter-spacing:-.055em;margin:0 0 18px}.muted{color:#5b6778;font-size:18px;line-height:1.55;margin:0}.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.service{background:#fff;border:1px solid rgba(15,23,42,.09);border-radius:24px;padding:24px;box-shadow:0 12px 36px rgba(15,23,42,.05);min-height:210px}.service:nth-child(1){background:#0b1726;color:white}.service:nth-child(1) p{color:#aebdd0}.num{font-size:12px;font-weight:900;color:#17a06b;letter-spacing:.12em}.service h3{font-size:24px;line-height:1.05;letter-spacing:-.035em;margin:18px 0 12px}.service p{margin:0;color:#5b6778;line-height:1.48}.proof{background:#e8eef0;padding:94px 22px}.proof-card{background:#fff;border-radius:32px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1fr 1fr}.proof-img{min-height:460px;background:url('../public/about-office.jpg') center/cover}.quote{padding:56px;display:flex;flex-direction:column;justify-content:center}.quote blockquote{font-family:ui-serif,Georgia,Cambria,serif;font-size:clamp(28px,3.2vw,44px);line-height:1.08;letter-spacing:-.045em;margin:0 0 28px}.quote p{color:#586679;line-height:1.6;font-size:17px}.final{padding:80px 22px 110px;background:#07111f;color:white}.final-box{border-radius:34px;background:linear-gradient(135deg,rgba(23,185,120,.18),rgba(143,184,255,.1));border:1px solid rgba(255,255,255,.12);padding:54px;display:flex;justify-content:space-between;align-items:center;gap:28px}.final h2{margin:0;font-family:ui-serif,Georgia,Cambria,serif;font-size:clamp(34px,5vw,64px);letter-spacing:-.055em;line-height:1}.final p{color:#b8c5d6;font-size:18px;line-height:1.5;max-width:560px}
+    @media(max-width:900px){.nav{display:none}.topbar{height:64px}.hero{padding-top:108px}.hero-grid,.split,.proof-card{grid-template-columns:1fr}.console{min-height:auto}.metrics{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.proof-img{min-height:300px}.final-box{display:block}.note{position:static;margin:16px;width:auto;max-width:none}.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="assumption">Założenie: kierunek „IT control room” — mniej generyczny landing, więcej poczucia: ktoś pilnuje firmowej infrastruktury. Placeholder logo tekstowe, bo brak brandbooka/SVG.</div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="mark">IT</span> MICROCOMP</a>
+    <nav class="nav"><a href="#uslugi">Usługi</a><a href="#proof">Zaufanie</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="call" href="tel:+48502568438"><span>●</span> 502 568 438</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Gardno · Szczecin · zachodniopomorskie</div>
+          <h1>IT, które nie robi dramatu w poniedziałek rano.</h1>
+          <p class="lead"><strong>Microcomp</strong> ogarnia monitoring, sieci, backup, serwis komputerów i strony WWW dla lokalnych firm — konkretnie, szybko, bez przerzucania odpowiedzialności.</p>
+          <div class="cta-row"><a class="primary" href="#kontakt">Umów rozmowę →</a><a class="secondary" href="#uslugi">Zobacz zakres usług</a></div>
+          <div class="metrics">
+            <div class="metric"><b>4.9★</b><small>28 opinii Google</small></div>
+            <div class="metric"><b>2000</b><small>firma działa od</small></div>
+            <div class="metric"><b>1 kontakt</b><small>IT, CCTV, backup, WWW</small></div>
+          </div>
+        </div>
+        <aside class="console" aria-label="Panel usług Microcomp">
+          <div class="screen-head"><div class="lights"><i></i><i></i><i></i></div><span>Microcomp service desk</span></div>
+          <div class="screen">
+            <div class="status">
+              <div class="status-top"><span class="pill">systemy pod kontrolą</span><span style="color:#8fb8ff;font-weight:800">LIVE</span></div>
+              <div class="bars"><div class="bar"><span style="width:88%"></span></div><div class="bar"><span style="width:74%"></span></div><div class="bar"><span style="width:96%"></span></div></div>
+            </div>
+            <div class="cards">
+              <div class="mini"><label>Monitoring</label><strong>CCTV + alarmy</strong><p>Kamery, rejestratory, podgląd z telefonu, serwis po montażu.</p></div>
+              <div class="mini"><label>Firmy</label><strong>Obsługa IT</strong><p>Stanowiska, sieci, kopie zapasowe, szybka reakcja.</p></div>
+            </div>
+            <div class="feed">
+              <div class="event"><i></i> Backup danych: sprawdzenie harmonogramu i odzyskiwania</div>
+              <div class="event"><i></i> Sieć biurowa: Wi‑Fi, routery, stabilność połączeń</div>
+              <div class="event"><i></i> Strona WWW: nowa realizacja lokalna + podstawy SEO</div>
+            </div>
+            <div class="map">
+              <div class="map-title">obszar działania</div>
+              <div class="map-grid"><span class="city">Gardno</span><span class="city">Gryfice</span><span class="city">Szczecin</span><span class="city">Nowogard</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="uslugi">
+      <div class="wrap split">
+        <div><h2>Zakres, który da się zrozumieć bez słownika IT.</h2><p class="muted">Nowy design ustawia Microcomp jako lokalnego operatora infrastruktury, nie „kolejną firmę od komputerów”. Karty są konkretne, bez ikonowego odpustu.</p></div>
+        <div class="service-grid">
+          <article class="service"><span class="num">01</span><h3>Monitoring CCTV i alarmy</h3><p>Dobór kamer, montaż, konfiguracja podglądu i serwis systemu.</p></article>
+          <article class="service"><span class="num">02</span><h3>Obsługa informatyczna firm</h3><p>Stała pomoc, komputery, poczta, sieci, drukarki i codzienne awarie.</p></article>
+          <article class="service"><span class="num">03</span><h3>Backup i bezpieczeństwo danych</h3><p>Kopie zapasowe, odzyskiwanie, podstawowe zabezpieczenia przed utratą danych.</p></article>
+          <article class="service"><span class="num">04</span><h3>Strony WWW i serwis</h3><p>Strony dla firm, poprawki, utrzymanie i techniczne ogarnięcie zaplecza.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof" id="proof">
+      <div class="wrap proof-card">
+        <div class="proof-img"></div>
+        <div class="quote">
+          <blockquote>„Największy plus: klient widzi od razu, że to firma od spraw technicznych, ale bez zimnego korpo‑feelingu.”</blockquote>
+          <p>Ten kierunek można przenieść do obecnego Next.js jako nowy hero + przebudowane sekcje usług. Dobrze pasuje do Microcomp, bo łączy lokalne zaufanie z nowocześniejszym „centrum dowodzenia”.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="kontakt">
+      <div class="wrap final-box">
+        <div><h2>Masz awarię, monitoring albo firmowe IT do ogarnięcia?</h2><p>Jeden telefon. Resztę można ustalić normalnym językiem.</p></div>
+        <a class="primary" href="tel:+48502568438">Zadzwoń: 502 568 438</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
