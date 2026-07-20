@@ -35,7 +35,7 @@ export default function HomePageContent() {
 
   const stats = [
     { icon: <CheckCircle size={22} />, value: "20+", label: "lat doświadczenia" },
-    { icon: <Star size={22} />, value: "4.9★", label: "Google (28 opinii)" },
+    { icon: <CheckCircle size={22} />, value: "200+", label: "obsługiwanych firm" },
     { icon: <CheckCircle size={22} />, value: "12", label: "miejscowości" },
     { icon: <CheckCircle size={22} />, value: "500+", label: "realizacji" },
   ];
@@ -70,7 +70,7 @@ export default function HomePageContent() {
   const testimonials = [
     {
       name: "Marek K.",
-      company: "PHU Korus, Gryfice",
+      company: "PHU Korus, Gryfino",
       quote:
         "Współpracujemy z Microcomp od 8 lat. Monitoring hali, sieć w biurze, serwer — wszystko na ich głowie. Zero problemów, szybka reakcja.",
       rating: 5,
@@ -84,7 +84,7 @@ export default function HomePageContent() {
     },
     {
       name: "Tomasz W.",
-      company: "Firma transportowa, Nowogard",
+      company: "Firma transportowa, Stargard",
       quote:
         "Wdrożyli Comarch ERP Optima i skonfigurowali sieć w nowej siedzibie. Profesjonalnie, terminowo, bez niespodzianek.",
       rating: 5,
@@ -286,7 +286,6 @@ export default function HomePageContent() {
                 <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
                   {[
                     "20+ lat doświadczenia",
-                    "★ 4.9 (28 opinii)",
                     "Całe woj. zachodniopomorskie",
                   ].map((text) => (
                     <div
@@ -672,16 +671,16 @@ export default function HomePageContent() {
               {[
                 { name: "Gardno", href: "/lokalizacja/gardno", highlight: true },
                 { name: "Szczecin", href: "/lokalizacja/szczecin", highlight: false },
-                { name: "Gryfice", href: "/lokalizacja/gryfice", highlight: false },
-                { name: "Nowogard", href: "/lokalizacja/nowogard", highlight: false },
-                { name: "Kamień Pomorski", href: "/lokalizacja/kamien-pomorski", highlight: false },
-                { name: "Powiat gryficki", href: "/lokalizacja/powiat-gryficki", highlight: false },
-                { name: "Gryfino", href: "/lokalizacja", highlight: false },
+                { name: "Gryfino", href: "/lokalizacja/gryfino", highlight: false },
+                { name: "Stargard", href: "/lokalizacja/stargard", highlight: false },
+                { name: "Pyrzyce", href: "/lokalizacja/pyrzyce", highlight: false },
+                { name: "Powiat gryfiński", href: "/lokalizacja/powiat-gryfinski", highlight: false },
+                { name: "Chojna", href: "/lokalizacja", highlight: false },
                 { name: "Goleniów", href: "/lokalizacja", highlight: false },
-                { name: "Stargard", href: "/lokalizacja", highlight: false },
+                { name: "Widuchowa", href: "/lokalizacja", highlight: false },
                 { name: "Police", href: "/lokalizacja", highlight: false },
-                { name: "Trzebiatów", href: "/lokalizacja", highlight: false },
-                { name: "Karlino", href: "/lokalizacja", highlight: false },
+                { name: "Banie", href: "/lokalizacja", highlight: false },
+                { name: "Kołbaskowo", href: "/lokalizacja", highlight: false },
               ].map((loc) => (
                 <Link
                   key={loc.name}

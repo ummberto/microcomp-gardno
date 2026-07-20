@@ -59,7 +59,7 @@ export const SERVICES: Service[] = [
       "monitoring domu",
     ],
     metaTitle:
-      "Monitoring CCTV Gardno — Kamery IP, TVI, CVI dla Firm i Domów | Microcomp",
+      "Monitoring CCTV Gardno — Kamery IP, TVI, CVI dla Firm i Domów",
     metaDescription:
       "Montaż i konfiguracja systemów monitoringu CCTV IP, TVI i CVI w Gardnie i okolicach. Kamery przemysłowe, alarmy, zabezpieczenia. Zadzwoń i zamów wycenę.",
     description:
@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
       {
         step: "2. Projekt i wycena",
         description:
-          "Przedstawiamy минимум 2 warianty rozwiązania z dokładną kalkulacją kosztów. Montaż może się zacząć w ciągu 5 dni roboczych od akceptacji.",
+          "Przedstawiamy minimum 2 warianty rozwiązania z dokładną kalkulacją kosztów. Montaż może się zacząć w ciągu 5 dni roboczych od akceptacji.",
       },
       {
         step: "3. Montaż i konfiguracja",
@@ -91,7 +91,7 @@ export const SERVICES: Service[] = [
     stats: [
       { value: "200+", label: "zainstalowanych systemów" },
       { value: "20 lat", label: "doświadczenia w CCTV" },
-      { value: "4.9/5", label: "ocena klientów Google" },
+      { value: "100%", label: "instalacje z gwarancją" },
       { value: "24h", label: "czas reakcji serwisu" },
     ],
     image: "/monitoring-cctv.jpg",
@@ -157,7 +157,7 @@ export const SERVICES: Service[] = [
       "wsparcie IT małe firmy",
     ],
     metaTitle:
-      "Usługi IT dla Firm Gardno — Outsourcing Informatyczny | Microcomp",
+      "Usługi IT dla Firm Gardno — Outsourcing Informatyczny",
     metaDescription:
       "Kompleksowa obsługa informatyczna firm w Gardnie i okolicach. Sieci, serwis, backup, wsparcie IT. Abonament od 600 zł/mc. Zadzwoń po bezpłatną wycenę.",
     description:
@@ -254,13 +254,13 @@ export const SERVICES: Service[] = [
       "landing page",
     ],
     metaTitle:
-      "Strony Internetowe Gardno — Tworzenie Stron WWW i Pozycjonowanie SEO | Microcomp",
+      "Strony Internetowe Gardno — Tworzenie Stron WWW i Pozycjonowanie SEO",
     metaDescription:
       "Profesjonalne strony WWW dla firm z Gardna i okolic. Wizytówki, sklepy, landing page. Pozycjonowanie SEO. Od 1800 zł. Zamów bezpłatną wycenę.",
     description:
       "Tworzymy profesjonalne strony internetowe dla firm: wizytówki, sklepy, landing page. Każda strona jest responsywna, zoptymalizowana pod SEO i szybka. Dodatkowo oferujemy pozycjonowanie w Google.",
     intro:
-      "Strona internetowa to wizytówka firmy w sieci — często pierwszy kontakt potencjalnego klienta z Twoją marką. Zlecając nam jej stworzenie, получаешь nowoczesny design, szybki czas ładowania i widoczność w wynikach Google. Реализуем страницы на основеNext.js — nowoczesna technologia, która zapewnia szybkość i bezpieczeństwo.",
+      "Strona internetowa to wizytówka firmy w sieci — często pierwszy kontakt potencjalnego klienta z Twoją marką. Zlecając nam jej stworzenie, otrzymujesz nowoczesny design, szybki czas ładowania i widoczność w wynikach Google. Tworzymy strony w oparciu o Next.js — nowoczesna technologia, która zapewnia szybkość i bezpieczeństwo.",
     howItWorks: [
       {
         step: "1. Briefing i analiza",
@@ -270,7 +270,7 @@ export const SERVICES: Service[] = [
       {
         step: "2. Projekt i zatwierdzenie",
         description:
-          "Przedstawiamy минимум 2 warianty layoutu. Po akceptacji projektu przechodzimy do kodowania.",
+          "Przedstawiamy minimum 2 warianty layoutu. Po akceptacji projektu przechodzimy do kodowania.",
       },
       {
         step: "3. Kodowanie i SEO",
@@ -347,7 +347,7 @@ export const SERVICES: Service[] = [
       "switch zarządzalny",
     ],
     metaTitle:
-      "Sieci Komputerowe Gardno — Projekt, Instalacja, Administracja | Microcomp",
+      "Sieci Komputerowe Gardno — Projekt, Instalacja, Administracja",
     metaDescription:
       "Projektowanie i instalacja sieci komputerowych LAN i WiFi dla firm w Gardnie i okolicach. Administracja, rozbudowa, diagnostyka. Zadzwoń po wycenę.",
     description:
@@ -435,7 +435,7 @@ export const SERVICES: Service[] = [
       "Comarch ERP XL",
     ],
     metaTitle:
-      "Comarch ERP Gardno — Wdrożenie, Szkolenia, Serwis | Microcomp",
+      "Comarch ERP Gardno — Wdrożenie, Szkolenia, Serwis",
     metaDescription:
       "Wdrożenie i obsługa Comarch ERP Optima i ERP XL w firmach w Gardnie i okolicach. Autoryzowany partner Comarch. Zadzwoń i zamów wycenę.",
     description:
@@ -525,7 +525,7 @@ export const SERVICES: Service[] = [
       "archiwizacja danych firmowych",
     ],
     metaTitle:
-      "Serwis Komputerów i Backup Danych Gardno | Microcomp",
+      "Serwis Komputerów i Backup Danych Gardno",
     metaDescription:
       "Serwis komputerów, naprawa laptopów, odzyskiwanie danych i automatyczne kopie zapasowe dla firm z Gardna, Szczecina i okolic.",
     description:

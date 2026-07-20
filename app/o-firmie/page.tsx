@@ -7,7 +7,7 @@ import { Phone, Mail, Calendar, Shield, Users, Award, CheckCircle, ArrowRight, S
 import { COMPANY, SCHEMA_LOCAL_BUSINESS } from "@/lib/facts";
 
 export const metadata: Metadata = {
-  title: "O Firmie — Microcomp Gardno. IT i zabezpieczenia od 2000 roku",
+  title: "O Firmie — IT i zabezpieczenia od 2000 roku",
   description:
     "Poznaj Microcomp — firma IT z Gardna (woj. zachodniopomorskie). Od 2000 roku świadczymy usługi IT dla firm: monitoring, alarmy, sieci, Comarch Optima, strony WWW. Autoryzowany partner Comarch, PcBiznes, Microsoft.",
   alternates: { canonical: "https://microcomp.co/o-firmie" },
@@ -50,7 +50,7 @@ export default function OFirmiePage() {
                 { value: "1997", label: "Początki działalności IT", icon: <Calendar size={24} /> },
                 { value: "2000", label: "Rok założenia Microcomp", icon: <Users size={24} /> },
                 { value: "3", label: "Autoryzowani partnerzy", icon: <Award size={24} /> },
-                { value: "4.9/5", label: "Ocena Google", icon: <Star size={24} /> },
+                { value: "200+", label: "Obsługiwanych firm", icon: <Users size={24} /> },
               ].map((stat, i) => (
                 <ScrollReveal key={stat.label} delay={i * 60}>
                   <div style={{ textAlign: "center", padding: "40px 20px", borderRight: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
@@ -119,7 +119,7 @@ export default function OFirmiePage() {
               {[
                 { title: "Lokalność", desc: "Siedziba w Gardnie, ale działamy w całym woj. zachodniopomorskim. Znamy specyfikę regionu." },
                 { title: "Doświadczenie", desc: "Od 1997 roku na rynku. 20+ lat to setki wdrożonych systemów i zadowolonych klientów." },
-                { title: "Stały kontakt", desc: "Jedna umowa, jeden opiekun. Nie musisz się przekopywać przez menu голосового automatu." },
+                { title: "Stały kontakt", desc: "Jedna umowa, jeden opiekun. Nie musisz się przekopywać przez menu głosowego automatu." },
                 { title: "Szybka reakcja", desc: "Reagujemy zdalnie w 30 minut. Na miejscu — tego samego dnia dla klientów abonamentowych." },
                 { title: "Autoryzowane partnerstwa", desc: "Jesteśmy partnerem Comarch, PcBiznes i Microsoft — rozwiązania są objęte pełnym wsparciem producenta." },
                 { title: "Przejrzyste ceny", desc: "Nigdy nie doliczamy ukrytych kosztów. Każda wycena jest szczegółowa i zrozumiała." },
@@ -174,12 +174,12 @@ export default function OFirmiePage() {
                 Co mówią o nas klienci
               </h2>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 16, marginBottom: 48, textAlign: "center" }}>
-                Ocena na Google Maps — 4.9/5 na podstawie 28 opinii
+                Opinie firm i instytucji, które obsługujemy od lat
               </p>
             </ScrollReveal>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
               {[
-                { name: "Marek W.", role: "Właściciel hurtowni, Gryfice", text: "Pan Dariusz obsługuje naszą firmę od 12 lat. Monitoring, sieć, serwer — wszystko na głowie Microcomp. Jak dotychczas zero problemów.", rating: 5 },
+                { name: "Marek W.", role: "Właściciel hurtowni, Gryfino", text: "Pan Dariusz obsługuje naszą firmę od 12 lat. Monitoring, sieć, serwer — wszystko na głowie Microcomp. Jak dotychczas zero problemów.", rating: 5 },
                 { name: "Anna K.", role: "Księgowa, biuro rachunkowe", text: "Comarch ERP Optima wdrożony perfekcyjnie. Przeszliśmy ze starego programu bezboleśnie. Wszystkie dane na miejscu.", rating: 5 },
                 { name: "Tomasz R.", role: "Dyrektor, firma produkcyjna", text: "Zleciliśmy instalację kamer w hali — 16 sztuk, ANPR na wjeździe. Ekipa sprawna, terminowo, w budżecie. Polecam.", rating: 5 },
               ].map((review, i) => (
@@ -214,7 +214,7 @@ export default function OFirmiePage() {
             </ScrollReveal>
             <div style={{ maxWidth: 700, margin: "0 auto" }}>
               {[
-                { year: "1997", event: "Początki działalności Dariusza Kmiecińskiego w branży IT. Pierwsze instalacje sieci komputerowych i serwis PC dla firm w regionie gryfickim." },
+                { year: "1997", event: "Początki działalności Dariusza Kmiecińskiego w branży IT. Pierwsze instalacje sieci komputerowych i serwis PC dla firm w regionie gryfińskim." },
                 { year: "2000", event: "Założenie firmy Microcomp Dariusz Kmieciński w Gardnie. Rozpoczęcie kompleksowej obsługi informatycznej firm — sprzęt, oprogramowanie, serwisy." },
                 { year: "2005", event: "Rozbudowa działu systemów zabezpieczeń. Pierwsze instalacje monitoringu CCTV dla firm i instytucji publicznych." },
                 { year: "2010", event: "Nawiązanie autoryzowanego partnerstwa z Comarch. Pierwsze wdrożenia Comarch Optima dla małych i średnich przedsiębiorstw." },

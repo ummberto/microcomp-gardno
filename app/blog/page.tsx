@@ -7,7 +7,7 @@ import { ArrowRight, Calendar } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/facts";
 
 export const metadata: Metadata = {
-  title: "Blog IT — Poradniki i Aktualności | Microcomp Gardno",
+  title: "Blog IT — Poradniki i Aktualności",
   description:
     "Poradniki IT, aktualności o bezpieczeństwie, monitoring i technologie. Pisane przez ekspertów Microcomp.",
   alternates: { canonical: "https://microcomp.co/blog" },

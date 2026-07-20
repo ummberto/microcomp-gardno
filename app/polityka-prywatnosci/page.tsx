@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { COMPANY } from "@/lib/facts";
 
 export const metadata: Metadata = {
-  title: "Polityka prywatności — Microcomp Gardno",
+  title: "Polityka prywatności",
   description: "Polityka prywatności strony microcomp.co: zakres danych, cel kontaktu, administrator i prawa użytkownika.",
   alternates: { canonical: "https://microcomp.co/polityka-prywatnosci" },
 };

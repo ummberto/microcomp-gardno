@@ -8,7 +8,7 @@ import { COMPANY } from "@/lib/facts";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Microcomp Gardno. Zadzwoń lub napisz.",
+  title: "Kontakt — Zadzwoń lub napisz",
   description:
     "Skontaktuj się z Microcomp Gardno. Zadzwoń: +48 502 568 438, napisz: microcomp@microcomp.co. Odpowiadamy w ciągu 24h.",
   alternates: { canonical: "https://microcomp.co/kontakt" },
@@ -52,7 +52,7 @@ export default function KontaktPage() {
                   label: "Telefon",
                   value: COMPANY.phone,
                   href: `tel:${COMPANY.phone.replace(/\s/g, "")}`,
-                  sub: "Pon–Pt 9:00–17:00",
+                  sub: "Pon–Pt 9:00–18:00",
                   color: "var(--color-green)",
                 },
                 {
@@ -67,14 +67,14 @@ export default function KontaktPage() {
                   icon: <MapPin size={24} />,
                   label: "Adres",
                   value: COMPANY.address,
-                  href: "https://maps.google.com/?q=ul.+Willowa+4+Gardno",
+                  href: "https://maps.google.com/?q=Niepodległości+69/3,+74-100+Gardno",
                   sub: `${COMPANY.city}, ${COMPANY.county}`,
                   color: "#8B5CF6",
                 },
                 {
                   icon: <Clock size={24} />,
                   label: "Godziny pracy",
-                  value: "Pon–Pt 9:00–17:00",
+                  value: "Pon–Pt 9:00–18:00",
                   href: null,
                   sub: "Wsparcie zdalne: 8:00–18:00",
                   color: "#F59E0B",
@@ -132,14 +132,14 @@ export default function KontaktPage() {
                       Jak dojechać
                     </h2>
                     <p style={{ color: "var(--color-slate-500)", fontSize: 15, lineHeight: 1.7 }}>
-                      Siedziba Microcomp znajduje się w Gardnie, przy ul. Willowej 4, w bezpośrednim sąsiedztwie drogi krajowej nr 107 w kierunku Gryfic.
+                      Siedziba Microcomp znajduje się w Gardnie (gmina Gryfino), przy ul. Niepodległości 69/3 — kilkanaście minut od Gryfina i około 25 minut od Szczecina.
                     </p>
                   </div>
 
                   {/* Mini map placeholder */}
                   <div style={{ borderRadius: 14, overflow: "hidden", border: "1px solid var(--color-slate-200)", height: 220, background: "var(--color-slate-100)" }}>
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.6!2d14.85!3d53.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDUxJzAwLjAiTiAxNMKwNTEnMDAuMCJF!5e0!3m2!1spl!2spl!4v1"
+                      src="https://www.google.com/maps?q=53.265172,14.6142458&z=16&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -193,7 +193,7 @@ export default function KontaktPage() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 24 }}>
               {[
                 { step: "01", title: "Odpowiadamy", desc: "W ciągu 24h — zwykle w 2–3 godziny. W godzinach pracy często szybciej." },
-                { step: "02", title: "Pytamy", desc: "Dopytamy o szczegóły, żeby zrozumieć sytuację i zaproponować реальне rozwiązanie." },
+                { step: "02", title: "Pytamy", desc: "Dopytamy o szczegóły, żeby zrozumieć sytuację i zaproponować realne rozwiązanie." },
                 { step: "03", title: "Wycena", desc: "Przesyłamy szczegółową wycenę z zakresem prac, czasem i ceną — bez ukrytych kosztów." },
                 { step: "04", title: "Decyzja", desc: "Zdecyduj bez presji. Możesz wybrać innego wykonawcę — rozumiemy." },
               ].map((item, i) => (

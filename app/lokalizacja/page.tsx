@@ -9,9 +9,9 @@ import { LOCATIONS } from "@/lib/locations";
 import { SERVICES } from "@/lib/services";
 
 export const metadata: Metadata = {
-  title: "IT dla Firm w Zachodniopomorskiem — Monitoring, Sieci, Strony | Microcomp Gardno",
+  title: "IT dla Firm w Zachodniopomorskiem — Monitoring, Sieci, Strony",
   description:
-    "Obsługujemy firmy w Szczecinie, Gryficach, Nowogardzie, Kamieniu Pomorskim i całym woj. zachodniopomorskim. IT, monitoring, sieci komputerowe, strony WWW.",
+    "Obsługujemy firmy w Szczecinie, Gryfinie, Stargardzie, Pyrzycach i całym woj. zachodniopomorskim. IT, monitoring, sieci komputerowe, strony WWW.",
   alternates: { canonical: "https://microcomp.co/lokalizacja" },
 };
 
@@ -140,9 +140,9 @@ export default function LokalizacjaPage() {
             </ScrollReveal>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 20 }}>
               {[
-                { icon: <CheckCircle size={24} />, title: "Dojazd z Gardna", desc: "Szybki dojazd do Szczecina, Gryfic, Nowogardu i okolic — zwykle do 40 minut." },
+                { icon: <CheckCircle size={24} />, title: "Dojazd z Gardna", desc: "Szybki dojazd do Szczecina, Gryfina, Stargardu i okolic — zwykle do 40 minut." },
                 { icon: <CheckCircle size={24} />, title: "Zdalnie wszędzie", desc: "80% problemów rozwiązujemy zdalnie — bez względu na odległość. Zero przestojów." },
-                { icon: <CheckCircle size={24} />, title: "Znany rejon", desc: "Znamy specyfikę regionu: turystyka, porty, firmy produkcyjne, rolnictwo — od 1997 roku." },
+                { icon: <CheckCircle size={24} />, title: "Znany rejon", desc: "Znamy specyfikę regionu: firmy produkcyjne, handel, samorządy i rolnictwo — od 1997 roku." },
                 { icon: <CheckCircle size={24} />, title: "Stały kontakt", desc: "Jedna umowa, jeden opiekun. Nie musisz szukać kolejnego dostawcy IT — masz nas." },
               ].map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 80}>
