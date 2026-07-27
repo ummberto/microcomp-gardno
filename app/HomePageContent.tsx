@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
-import { SplineScene } from "@/components/ui/splite";
-import { Spotlight } from "@/components/ui/spotlight";
+import HeroCinematic from "@/components/HeroCinematic";
 import {
   Monitor,
   Briefcase,
@@ -22,20 +20,9 @@ import { COMPANY } from "@/lib/facts";
 import { SERVICES } from "@/lib/services";
 
 export default function HomePageContent() {
-  const [showDesktopSpline, setShowDesktopSpline] = useState(false);
-
-  useEffect(() => {
-    const query = window.matchMedia("(min-width: 1024px)");
-    const update = () => setShowDesktopSpline(query.matches);
-
-    update();
-    query.addEventListener("change", update);
-    return () => query.removeEventListener("change", update);
-  }, []);
-
   const stats = [
     { icon: <CheckCircle size={22} />, value: "20+", label: "lat doświadczenia" },
-    { icon: <Star size={22} />, value: "4.9★", label: "Google (28 opinii)" },
+    { icon: <CheckCircle size={22} />, value: "200+", label: "obsługiwanych firm" },
     { icon: <CheckCircle size={22} />, value: "12", label: "miejscowości" },
     { icon: <CheckCircle size={22} />, value: "500+", label: "realizacji" },
   ];
@@ -70,7 +57,7 @@ export default function HomePageContent() {
   const testimonials = [
     {
       name: "Marek K.",
-      company: "PHU Korus, Gryfice",
+      company: "PHU Korus, Gryfino",
       quote:
         "Współpracujemy z Microcomp od 8 lat. Monitoring hali, sieć w biurze, serwer — wszystko na ich głowie. Zero problemów, szybka reakcja.",
       rating: 5,
@@ -84,7 +71,7 @@ export default function HomePageContent() {
     },
     {
       name: "Tomasz W.",
-      company: "Firma transportowa, Nowogard",
+      company: "Firma transportowa, Stargard",
       quote:
         "Wdrożyli Comarch ERP Optima i skonfigurowali sieć w nowej siedzibie. Profesjonalnie, terminowo, bez niespodzianek.",
       rating: 5,
@@ -102,293 +89,8 @@ export default function HomePageContent() {
 
   return (
     <>
-      {/* ─── HERO ─── */}
-      <div
-        className="home-hero"
-        style={{
-          backgroundColor: "#07131f",
-          backgroundImage:
-            "radial-gradient(circle at 72% 38%, rgba(255,255,255,0.16), transparent 0 18%, transparent 36%), radial-gradient(circle at 86% 78%, rgba(8,45,28,0.45), transparent 0 24%, transparent 52%), linear-gradient(102deg, #07131f 0%, #0b1829 48%, #1B813E 48%, #176d36 100%)",
-          minHeight: "680px",
-          position: "relative",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        {/* Single hero canvas — no image/card background stacking */}
-        <div
-          className="home-hero-overlay"
-          aria-hidden="true"
-        />
-
-        <div
-          className="home-hero-shell relative overflow-hidden"
-          style={{
-            width: "100%",
-            maxWidth: 1240,
-            margin: "0 auto",
-            padding: "80px 24px 36px",
-          }}
-        >
-          <div
-            className="home-hero-grid relative overflow-hidden"
-            style={{
-              minHeight: 470,
-              display: "flex",
-            }}
-          >
-            <Spotlight
-              className="-top-40 left-0 md:left-48 md:-top-20"
-              fill="rgba(27,129,62,0.20)"
-            />
-
-            {/* Left content */}
-            <div
-              className="home-hero-copy"
-              style={{
-                flex: "1 1 50%",
-                padding: "32px 56px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                position: "relative",
-                zIndex: 2,
-              }}
-            >
-              <ScrollReveal delay={0}>
-                <div
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    background: "rgba(13,159,110,0.12)",
-                    border: "1px solid rgba(13,159,110,0.25)",
-                    borderRadius: 100,
-                    padding: "5px 14px",
-                    marginBottom: 28,
-                  }}
-                >
-                  <span
-                    style={{
-                      width: 6,
-                      height: 6,
-                      borderRadius: "50%",
-                      background: "#0D9F6E",
-                      display: "inline-block",
-                    }}
-                  />
-                  <span
-                    style={{
-                      color: "#0D9F6E",
-                      fontSize: 12,
-                      fontWeight: 600,
-                      fontFamily: "var(--font-heading)",
-                      letterSpacing: "0.06em",
-                    }}
-                  >
-                    IT · Monitoring · Strony WWW
-                  </span>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={80}>
-                <h1
-                  className="home-hero-title"
-                  style={{
-                    color: "white",
-                    fontSize: "clamp(32px, 4vw, 52px)",
-                    fontWeight: 700,
-                    lineHeight: 1.1,
-                    maxWidth: 500,
-                    marginBottom: 24,
-                    letterSpacing: "-0.02em",
-                  }}
-                >
-                  IT i monitoring firm
-                  <span
-                    style={{
-                      display: "block",
-                      color: "#0D9F6E",
-                      background:
-                        "linear-gradient(135deg, #0D9F6E, #34d399)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    woj. zachodniopomorskie
-                  </span>
-                </h1>
-              </ScrollReveal>
-
-              <ScrollReveal delay={160}>
-                <p
-                  style={{
-                    color: "rgba(255,255,255,0.58)",
-                    fontSize: "clamp(15px, 1.5vw, 17px)",
-                    lineHeight: 1.7,
-                    maxWidth: 440,
-                    marginBottom: 36,
-                  }}
-                >
-                  Kompleksowa obsługa informatyczna firm i instytucji. Monitoring,
-                  alarmy, sieci komputerowe, Comarch ERP, strony WWW. Ponad 20 lat
-                  doświadczenia w woj. zachodniopomorskim.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={240}>
-                <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 30 }}>
-                  <a
-                    href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      background: "#0D9F6E",
-                      color: "white",
-                      fontFamily: "var(--font-heading)",
-                      fontWeight: 600,
-                      fontSize: 14,
-                      padding: "13px 24px",
-                      borderRadius: 10,
-                      textDecoration: "none",
-                    }}
-                  >
-                    <Phone size={16} />
-                    Zadzwoń teraz
-                  </a>
-                  <Link
-                    href="/kontakt"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 8,
-                      background: "rgba(255,255,255,0.07)",
-                      color: "rgba(255,255,255,0.8)",
-                      fontFamily: "var(--font-heading)",
-                      fontWeight: 600,
-                      fontSize: 14,
-                      padding: "13px 24px",
-                      borderRadius: 10,
-                      textDecoration: "none",
-                      border: "1px solid rgba(255,255,255,0.12)",
-                    }}
-                  >
-                    Poproś o wycenę
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={320}>
-                <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-                  {[
-                    "20+ lat doświadczenia",
-                    "★ 4.9 (28 opinii)",
-                    "Całe woj. zachodniopomorskie",
-                  ].map((text) => (
-                    <div
-                      key={text}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 7,
-                        color: "rgba(255,255,255,0.45)",
-                        fontSize: 12,
-                        fontFamily: "var(--font-heading)",
-                        fontWeight: 500,
-                      }}
-                    >
-                      <CheckCircle
-                        size={13}
-                        style={{ color: "#0D9F6E", flexShrink: 0 }}
-                      />
-                      {text}
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right content — 3D Spline scene */}
-            <div
-              className="home-hero-visual"
-              style={{
-                flex: "1 1 50%",
-                position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-              }}
-            >
-              <div
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  inset: "-8% -14% -10% -6%",
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px)",
-                  backgroundSize: "44px 44px",
-                  maskImage: "radial-gradient(circle at 56% 48%, black, transparent 70%)",
-                  pointerEvents: "none",
-                }}
-              />
-              <div
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  left: "18%",
-                  right: "10%",
-                  bottom: 8,
-                  height: 64,
-                  borderRadius: "50%",
-                  background:
-                    "radial-gradient(ellipse, rgba(7,19,31,0.66) 0%, rgba(7,19,31,0.34) 42%, rgba(7,19,31,0) 74%)",
-                  filter: "blur(1px)",
-                  transform: "perspective(520px) rotateX(58deg)",
-                  pointerEvents: "none",
-                  zIndex: 0,
-                }}
-              />
-              <div
-                aria-hidden="true"
-                style={{
-                  position: "absolute",
-                  width: "68%",
-                  aspectRatio: "1 / 1",
-                  borderRadius: "50%",
-                  background:
-                    "radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.07) 38%, rgba(255,255,255,0) 70%)",
-                  filter: "blur(1px)",
-                  pointerEvents: "none",
-                }}
-              />
-              <div
-                className="home-hero-spline"
-                style={{
-                  width: "100%",
-                  height: "min(480px, 54vw)",
-                  minHeight: 390,
-                  position: "relative",
-                  zIndex: 1,
-                  transform: "translateY(44px)",
-                }}
-              >
-                {showDesktopSpline ? (
-                  <SplineScene
-                    scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                    className="w-full h-full relative z-[1]"
-                  />
-                ) : null}
-              </div>
-              <div className="home-hero-mobile-photo" aria-hidden="true" />
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* ─── HERO (cinematic scroll-scrub) ─── */}
+      <HeroCinematic />
 
       {/* ─── STATS BAR ─── */}
       <section
@@ -672,16 +374,16 @@ export default function HomePageContent() {
               {[
                 { name: "Gardno", href: "/lokalizacja/gardno", highlight: true },
                 { name: "Szczecin", href: "/lokalizacja/szczecin", highlight: false },
-                { name: "Gryfice", href: "/lokalizacja/gryfice", highlight: false },
-                { name: "Nowogard", href: "/lokalizacja/nowogard", highlight: false },
-                { name: "Kamień Pomorski", href: "/lokalizacja/kamien-pomorski", highlight: false },
-                { name: "Powiat gryficki", href: "/lokalizacja/powiat-gryficki", highlight: false },
-                { name: "Gryfino", href: "/lokalizacja", highlight: false },
+                { name: "Gryfino", href: "/lokalizacja/gryfino", highlight: false },
+                { name: "Stargard", href: "/lokalizacja/stargard", highlight: false },
+                { name: "Pyrzyce", href: "/lokalizacja/pyrzyce", highlight: false },
+                { name: "Powiat gryfiński", href: "/lokalizacja/powiat-gryfinski", highlight: false },
+                { name: "Chojna", href: "/lokalizacja", highlight: false },
                 { name: "Goleniów", href: "/lokalizacja", highlight: false },
-                { name: "Stargard", href: "/lokalizacja", highlight: false },
+                { name: "Widuchowa", href: "/lokalizacja", highlight: false },
                 { name: "Police", href: "/lokalizacja", highlight: false },
-                { name: "Trzebiatów", href: "/lokalizacja", highlight: false },
-                { name: "Karlino", href: "/lokalizacja", highlight: false },
+                { name: "Banie", href: "/lokalizacja", highlight: false },
+                { name: "Kołbaskowo", href: "/lokalizacja", highlight: false },
               ].map((loc) => (
                 <Link
                   key={loc.name}

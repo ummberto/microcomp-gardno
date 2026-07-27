@@ -65,7 +65,7 @@ export default function RootLayout({
 }) {
   const orgSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "@id": "https://microcomp.co/#organization",
     "name": "Microcomp Dariusz Kmieciński",
     "alternateName": "Microcomp",
@@ -74,31 +74,28 @@ export default function RootLayout({
     "email": "microcomp@microcomp.co",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Willowa 4",
+      "streetAddress": "Niepodległości 69/3",
       "addressLocality": "Gardno",
       "addressRegion": "województwo zachodniopomorskie",
-      "postalCode": "72-410",
+      "postalCode": "74-100",
       "addressCountry": "PL",
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 53.85,
-      "longitude": 14.85,
+      "latitude": 53.265172,
+      "longitude": 14.6142458,
     },
     "areaServed": [
       "Gardno",
       "Szczecin",
-      "Gryfice",
-      "Nowogard",
-      "Kamień Pomorski",
+      "Chojna",
+      "Widuchowa",
+      "Banie",
       "Goleniów",
       "Gryfino",
       "Stargard",
       "Police",
       "Pyrzyce",
-      "Gorzów Wielkopolski",
-      "Zielona Góra",
-      "Szczecinek",
     ],
     "foundingDate": "2000",
     "priceRange": "$$",
@@ -113,10 +110,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-        <meta name="ICBM" content="53.85, 14.85" />
-        <meta name="geo.position" content="53.85;14.85" />
+        <meta name="ICBM" content="53.265172, 14.6142458" />
+        <meta name="geo.position" content="53.265172;14.6142458" />
         <meta name="geo.region" content="PL-32" />
-        <meta name="geo.placename" content="Gardno, Willowa 4" />
+        <meta name="geo.placename" content="Gardno, Niepodległości 69/3" />
         <meta name="robots" content="index, follow" />
       </head>
       <body className="grain antialiased">{children}</body>

@@ -2,3 +2,13 @@
 node_modules/
 .next/
 out/
+
+# OS / build junk
+.DS_Store
+*.tsbuildinfo
+
+# Local agent config
+.claude/
+
+# Design working material (heavy source PNGs + MP4 clips, planning notes) — kept local only
+_design/

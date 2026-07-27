@@ -246,8 +246,8 @@ export default async function ServicePage({ params }: Props) {
                   <strong style={{ color: "var(--color-navy)" }}>
                     w Gardnie i całym województwie zachodniopomorskim
                   </strong>{" "}
-                  — dojeżdżamy do Szczecina, Gryfic, Nowogardu, Kamienia
-                  Pomorskiego i okolicznych miejscowości.
+                  — dojeżdżamy do Szczecina, Gryfina, Stargardu, Pyrzyc
+                  i okolicznych miejscowości.
                 </p>
               </ScrollReveal>
 

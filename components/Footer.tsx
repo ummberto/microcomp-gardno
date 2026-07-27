@@ -176,10 +176,10 @@ export default function Footer() {
               {[
                 ["Gardno (siedziba)", "/lokalizacja/gardno"],
                 ["Szczecin", "/lokalizacja/szczecin"],
-                ["Gryfice", "/lokalizacja/gryfice"],
-                ["Nowogard", "/lokalizacja/nowogard"],
-                ["Kamień Pomorski", "/lokalizacja/kamien-pomorski"],
-                ["Powiat gryficki", "/lokalizacja/powiat-gryficki"],
+                ["Gryfino", "/lokalizacja/gryfino"],
+                ["Stargard", "/lokalizacja/stargard"],
+                ["Pyrzyce", "/lokalizacja/pyrzyce"],
+                ["Powiat gryfiński", "/lokalizacja/powiat-gryfinski"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <Link
